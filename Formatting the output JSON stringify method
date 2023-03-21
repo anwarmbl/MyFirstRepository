@@ -1,0 +1,3 @@
+router.get("/",(req,res)=>{
+    res.send(JSON.stringify({users},null,4));
+});
