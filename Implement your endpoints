@@ -70,3 +70,7 @@ router.delete("/:email", (req, res) => {
 });
 
 module.exports=router;
+
+curl --request POST 'localhost:5000/user?firstName=Jon&lastName=Lovato&email=jonlovato@theworld.com&DOB=10/10/1995' (To post the new user with email)
+curl localhost:5000/user/jonlovato@theworld.com (for checking/verifying)
+
