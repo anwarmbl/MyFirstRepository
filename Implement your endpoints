@@ -84,7 +84,10 @@ router.post("/",(req,res)=>{
 
 // DELETE request: Delete a user by email ID
 router.delete("/:email", (req, res) => {
-  // Copy the code here
+    const email = req.params.email;
+    users = users.filter((user) => user.email != email);
+    res.send(`User with the email  ${email} deleted.`);
+ // Copy the code here
   res.send("Yet to be implemented")//This line is to be replaced with actual return value
 });
 
@@ -93,3 +96,4 @@ module.exports=router;
 curl --request POST 'localhost:5000/user?firstName=Jon&lastName=Lovato&email=jonlovato@theworld.com&DOB=10/10/1995' (To post the new user with email)
 curl localhost:5000/user/jonlovato@theworld.com (for checking/verifying)
 curl --request PUT 'localhost:5000/user/johnsmith@gamil.com?DOB=1/1/1971' (For updating the DOB)
+curl --request DELETE 'localhost:5000/user/johnsmith@gamil.com' (For deleting with email id)
