@@ -92,4 +92,4 @@ module.exports=router;
 
 curl --request POST 'localhost:5000/user?firstName=Jon&lastName=Lovato&email=jonlovato@theworld.com&DOB=10/10/1995' (To post the new user with email)
 curl localhost:5000/user/jonlovato@theworld.com (for checking/verifying)
-
+curl --request PUT 'localhost:5000/user/johnsmith@gamil.com?DOB=1/1/1971' (For updating the DOB)
